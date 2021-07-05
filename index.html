@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="	
+    https://cdnjs.gtimg.com/cdnjs/libs/zepto/1.1.4/zepto.min.js"></script>
+    <style>
+      #hh {
+        transition: 0.5s;
+        overflow: scroll;
+      }
+      #hh::-webkit-scrollbar{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li onclick="expand()">
+        <p>标题</p>
+        <div id="hh" style="height: 0">
+          <div class="dropdown">
+            <p>ahsdsa</p>
+            <p>ahsdsa</p>
+            <p>ahsdsa</p>
+            <p>ahsdsa</p>
+            <p>ahsdsa</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </body>
+  <script>
+    function expand() {
+      $(hh).css("height") === "0px"
+        ? (hh.style.height = `${hh.scrollHeight}px`)
+        : (hh.style.height = "0px");
+    }
+  </script>
+</html>
